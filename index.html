@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cc40925aa9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- wrapper -->
+    <div>
+      <!-- header -->
+      <div>
+        <h2>Check weather</h2>
+      </div>
+      <!-- Tabs-container -->
+      <div>
+        <!-- Your location-->
+        <p class="tabs" data-userLocation>Your location</p>
+        <!-- Search weather-->
+        <p class="tabs" data-searchWeather>Search weather</p>
+      </div>
+      <!-- data containers -->
+      <div user-container>
+        <!-- grant location access containerNo(1) -->
+        <div grantLocation-container>
+          <!-- location icon -->
+          <div
+            class="h-16 w-16 rounded-full bg-red-800 flex justify-center items-center"
+          >
+            <i class="fa-solid fa-location-dot text-[2rem] text-white"></i>
+          </div>
+          <p>Grant Location Access</p>
+          <p>Allow Access to get weather Data</p>
+          <button data-grantAccess>Grant Access</button>
+        </div>
+        <!-- your location weather containerNo(2) -->
+        <div>
+          <!-- search bar -->
+          <form data-searchBar>
+            <input
+              type="text"
+              placeholder="search city name..."
+              data-searchInput
+            />
+            <div
+              class="h-10 w-10 rounded-full bg-red-800 flex justify-center items-center"
+              data-searchButton
+            >
+              <i
+                class="fa-solid fa-magnifying-glass-location text-[1.2rem] text-white"
+              ></i>
+            </div>
+          </form>
+        </div>
+        <!-- loading screen -->
+        <div loading-screen>
+          <img src="asstes/loadingd3.gif" class="rounded-md" alt="" />
+          <p>f*cking lazy</p>
+        </div>
+        <!--weather information container  containerNo(3) -->
+        <div weather-informationContainer>
+          <!-- city name and flag -->
+          <div data-cityNameFlag>
+            <div data-cityName></div>
+            <img data-countryFlag />
+          </div>
+          <!-- weather description -->
+          <p data-weatherDesc></p>
+          <!-- weather icon -->
+          <img data-weatherIcon />
+          <!-- temprature -->
+          <p data-temprature></p>
+          <!-- ---------------------------------------- -->
+          <!-- 3 cards - perameters-->
+          <div>
+            <!-- windspeed card -->
+            <div data-windSpeedCard>
+              <img src="asstes/wind.png" loading="lazy" />
+              <p>WINDSPEED</p>
+              <p data-windSpeed></p>
+            </div>
+            <!-- humidity card -->
+            <div data-humidityCard>
+              <img src="asstes/humidity.png" alt="" />
+              <p>HUMIDITY</p>
+              <p data-humidity></p>
+            </div>
+            <!-- clouds card -->
+            <div data-cloudsCard>
+              <img src="asstes/cloud.png" alt="" />
+              <p>Clouds</p>
+              <p data-clouds></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- adding javascript  -->
+    <script src="main.js"></script>
+  </body>
+</html>
